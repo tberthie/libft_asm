@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/02 21:10:30 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/02 21:20:15 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,12 @@ int			main(void)
 	printf("ft_isalpha(%c) = %d\n", 'z', ft_isalpha('z'));
 	printf("ft_isalpha(%c) = %d\n", 64, ft_isalpha(64));
 	printf("ft_isalpha(%c) = %d\n", 123, ft_isalpha(123));
+	printf("\n");
+
+	printf("ft_isdigit(%c) = %d\n", '0', ft_isdigit('0'));
+	printf("ft_isdigit(%c) = %d\n", '9', ft_isdigit('9'));
+	printf("ft_isdigit(%c) = %d\n", 47, ft_isdigit(47));
+	printf("ft_isdigit(%c) = %d\n", 58, ft_isdigit(58));
 	printf("\n");
 
 	return (0);
