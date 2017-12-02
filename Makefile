@@ -6,14 +6,14 @@
 #    By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/20 22:18:00 by tberthie          #+#    #+#              #
-#    Updated: 2017/12/02 22:07:21 by tberthie         ###   ########.fr        #
+#    Updated: 2017/12/02 22:14:35 by tberthie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NASM = ~/.brew/Cellar/nasm/2.13.01/bin/nasm
 
 OBJS = $(addsuffix .o, $(addprefix objs/ft_, bzero strcat isalpha isdigit \
-	   isalnum isascii isprint strlen))
+	   isalnum isascii toupper tolower isprint puts strlen))
 
 NAME = libfts.a
 

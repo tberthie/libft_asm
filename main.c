@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/02 22:08:32 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/02 22:26:29 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,17 @@ int			main(void)
 	printf("ft_isprint(%d) = %d\n", 177, ft_isprint(177));
 	printf("\n");
 
+	printf("ft_toupper(%c) = %c\n", 'a', ft_toupper('a'));
+	printf("ft_toupper(%c) = %c\n", 42, ft_toupper(42));
+	printf("\n");
+	
+	printf("ft_tolower(%c) = %c\n", 'A', ft_tolower('a'));
+	printf("ft_tolower(%c) = %c\n", 42, ft_tolower(42));
+	printf("\n");
+
+	tmp = strdup("Hello world");
+	printf("ft_puts('%s')\n", tmp);
+	ft_puts(tmp);
+	printf("\n\n");
 	return (0);
 }
