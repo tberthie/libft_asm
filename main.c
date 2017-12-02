@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/02 22:26:29 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/02 23:45:50 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,15 @@ int			main(void)
 	printf("ft_puts('%s')\n", tmp);
 	ft_puts(tmp);
 	printf("\n\n");
+
+	tmp = strdup("*****");
+	printf("ft_memset('%s', '-', 6)\n", tmp);
+	tmp = ft_memset(tmp, '-', 6);
+	printf("%s\n\n", tmp);
+
+	printf("ft_memcpy('%s', '*-*-*-', 6)\n", tmp);
+	tmp = ft_memcpy(tmp, "*-*-*-", 6);
+	printf("%s\n\n", tmp);
+
 	return (0);
 }
