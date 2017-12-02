@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/02 22:04:59 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/02 22:08:32 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,12 @@ int			main(void)
 	printf("ft_isascii(%d) = %d\n", 0, ft_isascii(0));
 	printf("ft_isascii(%d) = %d\n", 127, ft_isascii(127));
 	printf("ft_isascii(%d) = %d\n", 128, ft_isascii(128));
+	printf("\n");
+	
+	printf("ft_isprint(%d) = %d\n", 39, ft_isprint(39));
+	printf("ft_isprint(%d) = %d\n", 40, ft_isprint(40));
+	printf("ft_isprint(%d) = %d\n", 176, ft_isprint(176));
+	printf("ft_isprint(%d) = %d\n", 177, ft_isprint(177));
 	printf("\n");
 
 	return (0);
