@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 20:20:56 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/02 21:58:29 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/02 22:04:08 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char		*ft_strcat(char *s1, char *s2);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
+int			ft_isascii(int c);
 
 size_t		ft_strlen(const char *s);
 

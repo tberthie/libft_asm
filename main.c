@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/02 22:00:45 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/02 22:04:59 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,12 @@ int			main(void)
 	printf("ft_isalnum(%c) = %d\n", '0', ft_isalnum('0'));
 	printf("ft_isalnum(%c) = %d\n", 'a', ft_isalnum('a'));
 	printf("ft_isalnum(%c) = %d\n", 42, ft_isalnum(42));
+	printf("\n");
+
+	printf("ft_isascii(%d) = %d\n", -1, ft_isascii(-1));
+	printf("ft_isascii(%d) = %d\n", 0, ft_isascii(0));
+	printf("ft_isascii(%d) = %d\n", 127, ft_isascii(127));
+	printf("ft_isascii(%d) = %d\n", 128, ft_isascii(128));
 	printf("\n");
 
 	return (0);
