@@ -6,12 +6,12 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/03 15:03:57 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/03 15:46:06 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
+
 #include <stdio.h>
 
 int			main(void)
@@ -88,8 +88,7 @@ int			main(void)
 	printf("%s\n\n", tmp);
 
 	printf("ft_strdup('%s')\n", s1);
-	tmp = ft_strdup(s1);
-	printf("%s\n\n", tmp);
+	printf("%s\n\n", ft_strdup(s1));
 
 	return (0);
 }
