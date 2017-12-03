@@ -18,6 +18,8 @@ _ft_puts:
 	jmp .loop
 
 .ret:
+	mov byte [rsi+rdx], 10
+	inc rdx
 	syscall
 	mov rax, 1
 	ret

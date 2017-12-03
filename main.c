@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/02 23:45:50 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/03 15:03:57 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 int			main(void)
 {
-	char	s1[4] = "Hi\0";
-	char	s2[2] = "!\0";
+	char	s1[20] = "Hello\0";
+	char	s2[10] = " world!\0";
 	char	*tmp;
 
 	printf("ft_strlen('%s') = %zu\n", s1, ft_strlen(s1));
@@ -76,7 +76,7 @@ int			main(void)
 	tmp = strdup("Hello world");
 	printf("ft_puts('%s')\n", tmp);
 	ft_puts(tmp);
-	printf("\n\n");
+	printf("\n");
 
 	tmp = strdup("*****");
 	printf("ft_memset('%s', '-', 6)\n", tmp);
@@ -85,6 +85,10 @@ int			main(void)
 
 	printf("ft_memcpy('%s', '*-*-*-', 6)\n", tmp);
 	tmp = ft_memcpy(tmp, "*-*-*-", 6);
+	printf("%s\n\n", tmp);
+
+	printf("ft_strdup('%s')\n", s1);
+	tmp = ft_strdup(s1);
 	printf("%s\n\n", tmp);
 
 	return (0);

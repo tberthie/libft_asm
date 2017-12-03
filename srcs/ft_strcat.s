@@ -1,19 +1,24 @@
 section .text
 global _ft_strcat
+
 _ft_strcat:
 
 .main:
-	mov rcx, -1
-	mov rdx, rdi
-	mov al, 0
-	repne scasb
-	sub rdi, rdx
-	dec rdi
-
-.copy:
-	mov eax, [rsi]
-	mov [rdx+rdi], eax
-
+	mov rbx, rsi
+	mov rax, rdi
+	mov rcx, 0
+.end:
+	cmp byte [rdi], 0
+	je .len
+	inc rdi
+	jmp .end
+.len:
+	cmp byte [rbx], 0
+	je .ret
+	inc rcx
+	inc rbx
+	jmp .len
 .ret:
-	mov rax, rdx
+	inc rcx
+	rep movsb
 	ret
