@@ -6,7 +6,7 @@
 #    By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/20 22:18:00 by tberthie          #+#    #+#              #
-#    Updated: 2017/12/03 15:57:07 by tberthie         ###   ########.fr        #
+#    Updated: 2017/12/03 16:03:00 by tberthie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
+	##
 	gcc -o test main.c libfts.a -I.
 
 %.o: %.s
@@ -32,5 +33,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	##
+	rm -f test
 
 re: fclean all
