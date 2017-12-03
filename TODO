@@ -1,0 +1,2 @@
+secure all val=0;
+check if functions calls fail
