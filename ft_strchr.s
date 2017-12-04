@@ -4,7 +4,7 @@ _ft_strchr :
 
 .main:
 	mov rcx, 0
-	mov ecx, [rsi]
+	lea ecx, [rsi]
 .loop:
 	mov eax, [rdi+rcx]
 	cmp eax, ecx
@@ -17,6 +17,6 @@ _ft_strchr :
 	mov rax, 0
 	jmp .ret
 .ok:
-	mov rax, rdi
+	mov rax, [rdi+rcx]
 .ret:
 	ret
