@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/04 19:56:34 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/04 20:53:12 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int			main(int ac, char **av)
 	tmp = strdup(s1);
 	ft_bzero(tmp, ft_strlen(tmp));
 	printf("ft_bzero('%s') = '%s'\n", s1, tmp);
-	printf("ft_strlen('%s') = %zu\n", tmp, ft_strlen(tmp));
 	printf("\n");
 
 	printf("ft_isalpha(%c) = %d\n", 'A', ft_isalpha('A'));

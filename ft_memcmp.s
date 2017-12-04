@@ -2,21 +2,19 @@ section .text
 global _ft_memcmp
 _ft_memcmp:
 
-.main:
-	mov rcx, rdx
 .loop:
-	cmp rcx, 0
-	jl .ok
-	mov eax, [rdi+rcx]
-	mov ebx, [rsi+rcx]
+	cmp rdx, 0
+	je .ok
+	dec rdx
+	mov eax, [rdi+rdx]
+	mov ebx, [rsi+rdx]
 	cmp eax, ebx
 	jne .ko
-	dec rcx
 	jmp .loop
 .ok:
-	mov rax, 1
+	mov rax, 0
 	jmp .ret
 .ko:
-	mov rax, 0
+	mov rax, 1
 .ret:
 	ret

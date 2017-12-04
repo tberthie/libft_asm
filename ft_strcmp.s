@@ -14,9 +14,9 @@ _ft_strcmp:
 	inc rcx
 	jmp .loop
 .ok:
-	mov rax, 1
+	mov rax, 0
 	jmp .ret
 .ko:
-	mov rax, 0
+	mov rax, 1
 .ret:
 	ret
