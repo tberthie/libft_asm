@@ -13,6 +13,8 @@ extern _ft_puts
 _ft_cat:
 
 .main:
+	cmp rdi, 0
+	jl .ret
 	mov r9, rdi
 
 .read:
@@ -22,14 +24,16 @@ _ft_cat:
 	mov rdx, BUFF_SIZE
 	dec rdx
 	syscall
+	cmp rax, 0
+	jl .ret
 	mov rdi, 1
 	mov rdx, rax
 	lea rsi, [rel buffer]
 	mov r10, rax
 	mov rax, SYSCALL(WRITE)
 	syscall
-	cmp r10, 0
-	je .ret
+	cmp r10, 1
+	jl .ret
 	jmp .read
 .ret:
 	ret

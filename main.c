@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/03 18:58:25 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/04 16:43:10 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-int			main(void)
+int			main(int ac, char **av)
 {
 	char	s1[20] = "Hello\0";
 	char	s2[10] = " world!\0";
@@ -93,10 +93,15 @@ int			main(void)
 	tmp = ft_strdup(s1);
 	printf("%s\n\n", tmp);
 
-	printf("ft_cat(Makefile)\n");
-	int	fd = open("Makefile", O_RDONLY);
-	ft_cat(fd);
-	close(fd);
+	printf("ft_cat('%s')\n", av[1]);
+	int	fd = open(av[1], O_RDONLY);
+	if (fd < 0)
+		printf("Failed to open %s\n", av[1]);
+	else
+	{
+		ft_cat(fd);
+		close(fd);
+	}
 
 	return (0);
 }
