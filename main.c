@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/04 16:43:10 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/04 17:44:16 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,9 @@ int			main(int ac, char **av)
 		ft_cat(fd);
 		close(fd);
 	}
+	printf("\n");
 
+//	printf("ft_cat('%s') closed\n", av[1]);
+//	ft_cat(fd);
 	return (0);
 }
