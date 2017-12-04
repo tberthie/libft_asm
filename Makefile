@@ -6,34 +6,33 @@
 #    By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/20 22:18:00 by tberthie          #+#    #+#              #
-#    Updated: 2017/12/04 18:14:29 by tberthie         ###   ########.fr        #
+#    Updated: 2017/12/04 19:54:27 by tberthie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NASM = ~/.brew/Cellar/nasm/2.13.01/bin/nasm
-
 OBJS = $(addsuffix .o, $(addprefix ft_, bzero strcat isalpha isdigit \
 	   isalnum isascii toupper tolower isprint puts strlen memset memcpy \
-	   strdup cat memalloc strcpy))
+	   strdup cat memalloc memcmp strcpy strcmp strchr))
 
 NAME = libfts.a
 
 all: $(NAME)
 
+test: $(NAME)
+	gcc -o tst main.c libfts.a -I.
+	./tst
+	rm -f tst
+
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-	##
-	gcc -o test main.c libfts.a -I.
 
 %.o: %.s
-	$(NASM) -f macho64 -o $@ $<
+	nasm -f macho64 -o $@ $<
 
 clean:
 	rm -rf $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
-	##
-	rm -f test
 
 re: fclean all

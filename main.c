@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/04 18:17:01 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/04 19:56:34 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,5 +114,18 @@ int			main(int ac, char **av)
 
 	printf("ft_strcpy(ft_memalloc(12), 'Hello world')\n");
 	printf("%s\n\n", ft_strcpy(ft_memalloc(12), "Hello world"));
+
+	printf("ft_memcmp('hello', 'hi', 1) = %d\n", ft_memcmp("hello", "hi", 1));
+	printf("ft_memcmp('hello', 'hi', 2) = %d\n", ft_memcmp("hello", "hi", 2));
+	printf("\n");
+
+	printf("ft_strcmp('hello', 'world') = %d\n", ft_strcmp("hello", "world"));
+	printf("ft_strcmp('hello', 'hello') = %d\n", ft_strcmp("hello", "hello"));
+	printf("\n");
+
+	printf("ft_strchr('hello world', '*') = '%s'\n", ft_strchr("hello world", '*'));
+	printf("ft_strchr('hello world', ' ') = '%s'\n", ft_strchr("hello world", ' '));
+	printf("\n");
+
 	return (0);
 }
