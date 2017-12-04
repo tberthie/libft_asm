@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/04 18:02:58 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:16:06 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,5 +111,8 @@ int			main(int ac, char **av)
 	write(1, "'", 1);
 	write(1, ft_memalloc(10), 10);
 	write(1, "'\n", 2);
+
+	printf("ft_strcpy(ft_memalloc(12), 'Hello world')\n");
+	printf("%s\n\n", ft_strcpy(ft_memalloc(12), "Hello world"));
 	return (0);
 }

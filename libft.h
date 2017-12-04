@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 20:20:56 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/04 18:01:31 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:15:28 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ char		*ft_strdup(char *s);
 void		ft_cat(int fd);
 
 void		*ft_memalloc(size_t n);
+char		*ft_strcpy(char *dst, char *src);
 
 #endif
