@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 20:20:56 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/04 17:19:46 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:01:31 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void *dst, void *src, size_t len);
 char		*ft_strdup(char *s);
 void		ft_cat(int fd);
+
+void		*ft_memalloc(size_t n);
 
 #endif
