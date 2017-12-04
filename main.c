@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/03 17:36:04 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/03 18:58:25 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <fcntl.h>
 
 int			main(void)
 {
@@ -91,6 +92,11 @@ int			main(void)
 	printf("ft_strdup('%s')\n", s1);
 	tmp = ft_strdup(s1);
 	printf("%s\n\n", tmp);
+
+	printf("ft_cat(Makefile)\n");
+	int	fd = open("Makefile", O_RDONLY);
+	ft_cat(fd);
+	close(fd);
 
 	return (0);
 }

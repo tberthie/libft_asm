@@ -6,7 +6,7 @@
 #    By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/20 22:18:00 by tberthie          #+#    #+#              #
-#    Updated: 2017/12/03 16:03:00 by tberthie         ###   ########.fr        #
+#    Updated: 2017/12/03 18:35:45 by tberthie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NASM = ~/.brew/Cellar/nasm/2.13.01/bin/nasm
 
 OBJS = $(addsuffix .o, $(addprefix ft_, bzero strcat isalpha isdigit \
 	   isalnum isascii toupper tolower isprint puts strlen memset memcpy \
-	   strdup))
+	   strdup cat))
 
 NAME = libfts.a
 
