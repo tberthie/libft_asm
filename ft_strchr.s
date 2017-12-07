@@ -10,6 +10,8 @@ _ft_strchr :
 	call _ft_strlen
 	pop rdi
 	pop rsi
+	cmp rsi, 0
+	je .end
 	mov rcx, rax
 	mov rax, rsi
 	cld
@@ -18,6 +20,10 @@ _ft_strchr :
 	jz .ret
 	mov rax, rdi
 	dec rax
+	ret
+.end:
+	add rdi, rax
+	mov rax, rdi
 	ret
 .ret:
 	mov rax, 0
