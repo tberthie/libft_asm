@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/07 18:35:23 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/07 19:44:23 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,20 +92,6 @@ int			main(int ac, char **av)
 	tmp = ft_strdup(s1);
 	printf("%s\n\n", tmp);
 
-/*	printf("ft_cat('%s')\n", av[1]);
-	int	fd = open(av[1], O_RDONLY);
-	if (fd < 0)
-		printf("Failed to open %s\n", av[1]);
-	else
-	{
-		ft_cat(fd);
-		close(fd);
-	}
-	printf("\n");
-
-	printf("ft_cat('%s') closed\n", av[1]);
-	ft_cat(fd);*/
-
 	printf("ft_memalloc(10)\n");
 	write(1, "'", 1);
 	write(1, ft_memalloc(10), 10);
@@ -126,5 +112,13 @@ int			main(int ac, char **av)
 	printf("ft_strchr('hello world', ' ') = '%s'\n", ft_strchr("hello world", 32));
 	printf("\n");
 
+	int		fd;
+
+	printf("ft_cat('Makefile')\n");
+	fd = open("Makefile", O_RDONLY);
+	ft_cat(fd);
+	printf("\nft_cat([closed])\n");
+	close(fd);
+	ft_cat(fd);
 	return (0);
 }

@@ -1,6 +1,0 @@
-ft_cat infinite loop
-
-check if all size_t > 0
-
-secure all val=0;
-check if functions calls fail
