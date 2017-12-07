@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 20:20:56 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/04 20:51:37 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/07 15:12:14 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ void		*ft_memalloc(size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 char		*ft_strcpy(char *dst, const char *src);
 int			ft_strcmp(const char *s1, const char *s2);
-void		*ft_strchr(char *s, char c);
+void		*ft_strchr(char *s, int c);
 
 #endif

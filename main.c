@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/04 20:53:12 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/07 15:17:36 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,7 +123,7 @@ int			main(int ac, char **av)
 	printf("\n");
 
 	printf("ft_strchr('hello world', '*') = '%s'\n", ft_strchr("hello world", '*'));
-	printf("ft_strchr('hello world', ' ') = '%s'\n", ft_strchr("hello world", ' '));
+	printf("ft_strchr('hello world', ' ') = '%s'\n", ft_strchr("hello world", 32));
 	printf("\n");
 
 	return (0);
