@@ -1,22 +1,20 @@
 section .text
 global _ft_strcmp
+extern _ft_strlen
 _ft_strcmp:
 
 .main:
-	mov rcx, 0
-.loop:
-	mov eax, [rdi+rcx]
-	mov ebx, [rsi+rcx]
-	cmp eax, ebx
-	jne .ko
-	cmp eax, 0
+	push rdi
+	push rsi
+	call _ft_strlen
+	pop rsi
+	pop rdi
+	inc rax
+	mov rcx, rax
+	repe cmpsb
 	je .ok
-	inc rcx
-	jmp .loop
+	mov rax, 1
+	ret
 .ok:
 	mov rax, 0
-	jmp .ret
-.ko:
-	mov rax, 1
-.ret:
 	ret
