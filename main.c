@@ -6,7 +6,7 @@
 /*   By: tberthie <tberthie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 22:02:45 by tberthie          #+#    #+#             */
-/*   Updated: 2017/12/07 15:17:36 by tberthie         ###   ########.fr       */
+/*   Updated: 2017/12/07 18:35:23 by tberthie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ int			main(int ac, char **av)
 	tmp = ft_strdup(s1);
 	printf("%s\n\n", tmp);
 
-	printf("ft_cat('%s')\n", av[1]);
+/*	printf("ft_cat('%s')\n", av[1]);
 	int	fd = open(av[1], O_RDONLY);
 	if (fd < 0)
 		printf("Failed to open %s\n", av[1]);
@@ -103,8 +103,8 @@ int			main(int ac, char **av)
 	}
 	printf("\n");
 
-//	printf("ft_cat('%s') closed\n", av[1]);
-//	ft_cat(fd);
+	printf("ft_cat('%s') closed\n", av[1]);
+	ft_cat(fd);*/
 
 	printf("ft_memalloc(10)\n");
 	write(1, "'", 1);
